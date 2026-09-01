@@ -7,9 +7,6 @@ import Projects from './components/Projects';
 import HireMe from './components/HireMe';
 import ContactForm from './components/ContactForm';
 import Footer from './components/Footer';
-import ThreeBackground from './components/ThreeBackground';
-import ScrollProgress from './components/ScrollProgress';
-import CustomCursor from './components/CustomCursor';
 import './App.css';
 
 function App() {
@@ -28,9 +25,6 @@ function App() {
 
   return (
     <div className="app">
-      <CustomCursor />
-      <ScrollProgress />
-      <ThreeBackground />
       <Navigation 
         onNavigate={scrollToSection}
         refs={{ aboutRef, skillsRef, projectsRef, hireMeRef }}

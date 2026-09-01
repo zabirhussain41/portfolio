@@ -34,13 +34,7 @@ const Hero = forwardRef((props, ref) => {
             >
               <span className="label">HELLO, I'M</span>
               <h2 className="hero-name glow-text">
-                <TypingAnimation 
-                  texts={['ZABIR HUSSAIN']} 
-                  className="name-typing"
-                  typingSpeed={100}
-                  deletingSpeed={50}
-                  pauseDuration={3000}
-                />
+                ZABIR HUSSAIN
               </h2>
               <h3 className="hero-title hover-text">JAVA BACKEND DEVELOPER</h3>
             </motion.div>
