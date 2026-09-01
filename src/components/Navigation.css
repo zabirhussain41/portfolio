@@ -1,0 +1,143 @@
+.navigation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  padding: 20px 40px;
+  background: transparent;
+  transition: all 0.3s ease;
+}
+
+.navigation.scrolled {
+  background: rgba(242, 237, 227, 0.95);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.05);
+}
+
+.nav-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-left {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.nav-name {
+  font-family: 'Anton', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  color: var(--primary-text);
+}
+
+.nav-label {
+  font-size: 0.625rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--secondary-text);
+  font-weight: 500;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.nav-label-right {
+  text-align: right;
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+}
+
+.nav-link {
+  background: none;
+  border: none;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--primary-text);
+  cursor: pointer;
+  padding: 8px 0;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--accent);
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover {
+  color: var(--accent);
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+@media (max-width: 1024px) {
+  .navigation {
+    padding: 15px 20px;
+  }
+  
+  .nav-container {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .nav-right {
+    flex-direction: column;
+    gap: 15px;
+    align-items: flex-end;
+  }
+  
+  .nav-label-right {
+    text-align: right;
+  }
+}
+
+@media (max-width: 768px) {
+  .navigation {
+    padding: 15px 20px;
+  }
+  
+  .nav-name {
+    font-size: 1rem;
+  }
+  
+  .nav-label {
+    font-size: 0.5rem;
+  }
+  
+  .nav-links {
+    gap: 20px;
+  }
+  
+  .nav-link {
+    font-size: 0.625rem;
+  }
+  
+  .nav-right {
+    gap: 10px;
+  }
+}
