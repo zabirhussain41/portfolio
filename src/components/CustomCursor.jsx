@@ -22,8 +22,8 @@ function CustomCursor() {
 
     const animateCursor = () => {
       setPosition(prev => ({
-        x: prev.x + (cursorRef.current.x - prev.x) * 0.08,
-        y: prev.y + (cursorRef.current.y - prev.y) * 0.08
+        x: prev.x + (cursorRef.current.x - prev.x) * 0.12,
+        y: prev.y + (cursorRef.current.y - prev.y) * 0.12
       }));
       requestRef.current = requestAnimationFrame(animateCursor);
     };

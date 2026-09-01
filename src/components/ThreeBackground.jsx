@@ -21,14 +21,14 @@ function FloatingParticles() {
 
   useFrame((state) => {
     if (particlesRef.current) {
-      particlesRef.current.rotation.y = state.clock.elapsedTime * 0.03;
-      particlesRef.current.rotation.x = state.clock.elapsedTime * 0.01;
+      particlesRef.current.rotation.y = state.clock.elapsedTime * 0.02;
+      particlesRef.current.rotation.x = state.clock.elapsedTime * 0.008;
       
-      // Cursor movement effect
-      const targetX = mouse.x * viewport.width * 0.2;
-      const targetY = -mouse.y * viewport.height * 0.2;
-      particlesRef.current.position.x += (targetX - particlesRef.current.position.x) * 0.03;
-      particlesRef.current.position.y += (targetY - particlesRef.current.position.y) * 0.03;
+      // Cursor movement effect - smoother
+      const targetX = mouse.x * viewport.width * 0.15;
+      const targetY = -mouse.y * viewport.height * 0.15;
+      particlesRef.current.position.x += (targetX - particlesRef.current.position.x) * 0.02;
+      particlesRef.current.position.y += (targetY - particlesRef.current.position.y) * 0.02;
     }
   });
 
@@ -93,8 +93,8 @@ function StarField() {
 
   useFrame((state) => {
     if (starsRef.current) {
-      starsRef.current.rotation.y = state.clock.elapsedTime * 0.02;
-      starsRef.current.rotation.x = state.clock.elapsedTime * 0.01;
+      starsRef.current.rotation.y = state.clock.elapsedTime * 0.01;
+      starsRef.current.rotation.x = state.clock.elapsedTime * 0.005;
     }
   });
 
@@ -137,15 +137,15 @@ function GeometricShapes() {
 
   useFrame((state) => {
     if (groupRef.current) {
-      groupRef.current.rotation.y = state.clock.elapsedTime * 0.08;
+      groupRef.current.rotation.y = state.clock.elapsedTime * 0.05;
       groupRef.current.children.forEach((child, i) => {
-        child.rotation.x = state.clock.elapsedTime * 0.08 * (i + 1);
-        child.rotation.z = state.clock.elapsedTime * 0.04 * (i + 1);
+        child.rotation.x = state.clock.elapsedTime * 0.05 * (i + 1);
+        child.rotation.z = state.clock.elapsedTime * 0.025 * (i + 1);
       });
       
-      // Cursor movement effect
-      groupRef.current.rotation.x += (mouse.y * 0.2 - groupRef.current.rotation.x) * 0.015;
-      groupRef.current.rotation.y += (mouse.x * 0.2 - groupRef.current.rotation.y) * 0.015;
+      // Cursor movement effect - smoother
+      groupRef.current.rotation.x += (mouse.y * 0.15 - groupRef.current.rotation.x) * 0.01;
+      groupRef.current.rotation.y += (mouse.x * 0.15 - groupRef.current.rotation.y) * 0.01;
     }
   });
 
