@@ -1,7 +1,7 @@
 .about {
   background: var(--background);
   position: relative;
-  padding-top: 60px;
+  padding-top: 40px;
 }
 
 .about-header {
@@ -231,8 +231,12 @@
 }
 
 @media (max-width: 768px) {
+  .about {
+    padding-top: 20px;
+  }
+
   .about-header {
-    margin-bottom: 40px;
+    margin-bottom: 30px;
   }
   
   .about-header h2 {
@@ -246,6 +250,14 @@
   .about-secondary {
     font-size: 0.9375rem;
   }
+
+  .about-content {
+    gap: 30px;
+  }
+
+  .about-text {
+    gap: 20px;
+  }
   
   .code-block {
     font-size: 0.75rem;
@@ -253,5 +265,56 @@
   
   .code-content {
     padding: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .about {
+    padding-top: 15px;
+  }
+
+  .about-header {
+    margin-bottom: 20px;
+  }
+
+  .about-header h2 {
+    font-size: 1.5rem;
+  }
+
+  .about-description {
+    font-size: 1rem;
+  }
+
+  .about-secondary {
+    font-size: 0.875rem;
+  }
+
+  .about-text {
+    gap: 15px;
+  }
+
+  .about-keypoints {
+    padding: 16px;
+    margin-top: 16px;
+  }
+
+  .about-keypoints li {
+    font-size: 0.875rem;
+  }
+
+  .highlight-item {
+    padding: 12px;
+  }
+
+  .highlight-text {
+    font-size: 0.65rem;
+  }
+
+  .code-content {
+    padding: 12px;
+  }
+
+  .code-block {
+    font-size: 0.65rem;
   }
 }
