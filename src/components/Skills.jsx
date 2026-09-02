@@ -7,16 +7,16 @@ const Skills = forwardRef((props, ref) => {
   const [animatedSkills, setAnimatedSkills] = useState({});
 
   const skills = [
-    { name: 'Java', level: 95 },
-    { name: 'Spring Boot', level: 90 },
-    { name: 'REST APIs', level: 92 },
-    { name: 'MySQL', level: 88 },
-    { name: 'Hibernate / JPA', level: 88 },
-    { name: 'Spring Security', level: 88 },
-    { name: 'Microservices', level: 82 },
-    { name: 'Docker', level: 80 },
-    { name: 'Git / GitHub', level: 88 },
-    { name: 'Azure / DevOps', level: 75 }
+    { name: 'Java', level: 75 },
+    { name: 'Spring Boot', level: 55 },
+    { name: 'REST APIs', level: 60 },
+    { name: 'MySQL', level: 58 },
+    { name: 'Hibernate / JPA', level: 56 },
+    { name: 'Spring Security', level: 54 },
+    { name: 'Microservices', level: 52 },
+    { name: 'Docker', level: 50 },
+    { name: 'Git / GitHub', level: 58 },
+    { name: 'Azure / DevOps', level: 57 }
   ];
 
   useEffect(() => {
